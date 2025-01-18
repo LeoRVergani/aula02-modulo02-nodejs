@@ -1,3 +1,5 @@
+const prompt = require("prompt-sync")()
+
 const despesas = [
     { nome: "Aluguel", valor: 1200},
     { nome: "Mercado", valor: 450},
@@ -8,8 +10,10 @@ const despesas = [
     { nome: "Academia", valor: 90}
 ]
 
+let limite = prompt("Digite o valor limite: ")
+
 const despesasAltas = despesas.filter((despesasDoMes) => {
-    if (despesasDoMes.valor > 150) {
+    if (despesasDoMes.valor > limite) {
         return true
     } else {
         return false
